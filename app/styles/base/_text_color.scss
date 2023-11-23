@@ -1,0 +1,15 @@
+@use 'sass:string';
+
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    @each $color in $colors {
+      $color_name: str-slice(#{$color}, 2);
+
+      .#{$break-point-name}text-#{$color_name} {
+        color: $color;
+      }
+    }
+  }
+}

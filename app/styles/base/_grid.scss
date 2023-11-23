@@ -1,0 +1,87 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}grid {
+      display: grid;
+    }
+
+    .#{$break-point-name}grid-none {
+      grid: none;
+    }
+
+    //== grid template columns ==//
+    @each $grid-col in $grid-cols {
+      .#{$break-point-name}grid-cols-#{$grid-col} {
+        grid-template-columns: repeat($grid-col, minmax(0, 1fr));
+      }
+    }
+
+    .#{$break-point-name}grid-cols-none {
+      grid-template-columns: none;
+    }
+
+    //== grid column start / end ==//
+    .#{$break-point-name}col-none {
+      grid-column: auto;
+    }
+
+    @each $grid-col in $grid-cols {
+      .#{$break-point-name}col-span-#{$grid-col} {
+        grid-column: span $grid-col / span $grid-col;
+      }
+    }
+
+    .#{$break-point-name}col-span-full {
+      grid-column: 1 / -1;
+    }
+
+    //== grid column start ==//
+    @each $grid-col in $grid-cols {
+      .#{$break-point-name}col-start-#{$grid-col} {
+        grid-column-start: $grid-col;
+      }
+    }
+
+    .#{$break-point-name}col-start-auto {
+      grid-column-start: auto;
+    }
+
+    //== grid column end ==//
+    @each $grid-col in $grid-cols {
+      .#{$break-point-name}col-end-#{$grid-col} {
+        grid-column-end: $grid-col;
+      }
+    }
+
+    .#{$break-point-name}col-end-auto {
+      grid-column-end: auto;
+    }
+
+    //== grid template rows ==//
+    @each $grid-row in $grid-rows {
+      .#{$break-point-name}grid-rows-#{$grid-row} {
+        grid-template-rows: repeat($grid-row, minmax(0, 1fr));
+      }
+    }
+
+    .#{$break-point-name}grid-rows-none {
+      grid-template-rows: none;
+    }
+
+    //== grid row start / end ==//
+    .#{$break-point-name}row-auto {
+      grid-row: auto;
+    }
+
+    @each $grid-row in $grid-rows {
+      .#{$break-point-name}row-span-#{$grid-row} {
+        grid-row: span $grid-row / span $grid-row;
+      }
+    }
+
+    .#{$break-point-name}row-span-full {
+      grid-row: 1 / -1;
+    }
+  }
+}

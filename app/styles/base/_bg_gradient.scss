@@ -1,0 +1,15 @@
+@use 'sass:string';
+
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}bg-gradient {
+      background-image: linear-gradient(to top, #3612b2, #3612b2);
+    }
+
+    .#{$break-point-name}bg-gradient-1 {
+      background-image: linear-gradient(to top, #fbcd5e, #f2a93a);
+    }
+  }
+}

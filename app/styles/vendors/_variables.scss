@@ -1,13 +1,13 @@
 // Variables
 // --------------------------
 
-@use "sass:math";
+@use 'sass:math';
 
-$fa-font-path: "../fonts" !default;
+$fa-font-path: '../fonts' !default;
 $fa-font-size-base: 16px !default;
 $fa-font-display: auto !default;
 $fa-css-prefix: fa !default;
-$fa-version: "5.9.0" !default;
+$fa-version: '5.9.0' !default;
 $fa-border-color: #eee !default;
 $fa-inverse: #fff !default;
 $fa-li-width: 2em !default;
@@ -2092,3 +2092,33 @@ $fa-var-yoast: \f2b1;
 $fa-var-youtube: \f167;
 $fa-var-youtube-square: \f431;
 $fa-var-zhihu: \f63f;
+
+//== common ==//
+$root-font-size: 16px;
+
+$max_sizing: 1280px;
+
+$max-spacing: 240px;
+
+$max-gap: 120px;
+
+$max-position: 120px;
+
+$break-points: 'auto', 'xl', 'lg', 'md', 'sm';
+
+$grid-cols: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13;
+
+$grid-rows: 1, 2, 3, 4, 5, 6, 7;
+
+$gaps: 0px, 1px, 2px, 3px, 4px, 5px, 6px, 8px, 10px, 12px, 16px, 20px, 24px,
+  28px, 32px, 36px, 40px;
+
+$font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+$colors: #19c144, #676970, #3f4042, #fff, #201f1e, #f0ff00, #000, #808081,
+  #ffd9e3, #fa4f91, #9ce1e6, #f76844, #ffcfc3, #7d532e, #fed4af, #af8968,
+  #f7ceb4, #ffe0cd, #e7f06e, #ffc5dd, #312611, #f7f7f7, #aea2db, #3612b2, #ffba00, #e0e0e0, #000;
+
+$border-colors: #e0e0e0, #eaeaea, #382ec1;
+
+$opacities: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 95, 100;

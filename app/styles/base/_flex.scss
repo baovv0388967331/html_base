@@ -1,0 +1,56 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    //== flex ==//
+    .#{$break-point-name}flex {
+      display: flex;
+    }
+
+    .#{$break-point-name}flex-1 {
+      flex: 1 1 0%;
+    }
+
+    .#{$break-point-name}flex-auto {
+      flex: 1 1 auto;
+    }
+
+    .#{$break-point-name}flex-initial {
+      flex: 0 1 auto;
+    }
+
+    .#{$break-point-name}flex-none {
+      flex: none;
+    }
+
+    //== flex wrap ==//
+    .#{$break-point-name}flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .#{$break-point-name}flex-wrap-reverse {
+      flex-wrap: wrap-reverse;
+    }
+
+    .#{$break-point-name}flex-nowrap {
+      flex-wrap: nowrap;
+    }
+
+    //== flex direction ==//
+    .#{$break-point-name}flex-row {
+      flex-direction: row;
+    }
+
+    .#{$break-point-name}flex-row-reverse {
+      flex-direction: row-reverse;
+    }
+
+    .#{$break-point-name}flex-col {
+      flex-direction: column;
+    }
+
+    .#{$break-point-name}flex-col-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+}

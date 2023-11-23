@@ -1,0 +1,134 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    @each $border-color in $border-colors {
+      $color_name: str-slice(#{$border-color}, 2);
+
+      .#{$break-point-name}border-solid-#{$color_name} {
+        border: 1px solid $border-color;
+      }
+
+      .#{$break-point-name}border-dashed-#{$color_name} {
+        border: 1px dashed $border-color;
+      }
+
+      .#{$break-point-name}border-dotted-#{$color_name} {
+        border: 1px dotted $border-color;
+      }
+
+      .#{$break-point-name}border-double-#{$color_name} {
+        border: 1px double $border-color;
+      }
+
+      .#{$break-point-name}border-none {
+        border: none;
+      }
+
+      //== bottom ==//
+      .#{$break-point-name}border-b-solid-#{$color_name} {
+        border-bottom: 1px solid $border-color;
+      }
+
+      .#{$break-point-name}border-b-dashed-#{$color_name} {
+        border-bottom: 1px dashed $border-color;
+      }
+
+      .#{$break-point-name}border-b-dotted-#{$color_name} {
+        border-bottom: 1px dotted $border-color;
+      }
+
+      .#{$break-point-name}border-b-double-#{$color_name} {
+        border-bottom: 1px double $border-color;
+      }
+
+      .#{$break-point-name}border-b-none {
+        border-bottom: none;
+      }
+
+       //== right ==//
+       .#{$break-point-name}border-r-solid-#{$color_name} {
+        border-right: 1px solid $border-color;
+      }
+
+      .#{$break-point-name}border-r-dashed-#{$color_name} {
+        border-right: 1px dashed $border-color;
+      }
+
+      .#{$break-point-name}border-r-dotted-#{$color_name} {
+        border-right: 1px dotted $border-color;
+      }
+
+      .#{$break-point-name}border-r-double-#{$color_name} {
+        border-right: 1px double $border-color;
+      }
+
+      .#{$break-point-name}border-r-none {
+        border-right: none;
+      }
+
+       //== top ==//
+       .#{$break-point-name}border-t-solid-#{$color_name} {
+        border-right: 1px solid $border-color;
+      }
+
+      .#{$break-point-name}border-t-dashed-#{$color_name} {
+        border-right: 1px dashed $border-color;
+      }
+
+      .#{$break-point-name}border-t-dotted-#{$color_name} {
+        border-right: 1px dotted $border-color;
+      }
+
+      .#{$break-point-name}border-t-double-#{$color_name} {
+        border-right: 1px double $border-color;
+      }
+
+      .#{$break-point-name}border-t-none {
+        border-right: none;
+      }
+
+       //== right ==//
+       .#{$break-point-name}border-r-solid-#{$color_name} {
+        border-right: 1px solid $border-color;
+      }
+
+      .#{$break-point-name}border-r-dashed-#{$color_name} {
+        border-right: 1px dashed $border-color;
+      }
+
+      .#{$break-point-name}border-r-dotted-#{$color_name} {
+        border-right: 1px dotted $border-color;
+      }
+
+      .#{$break-point-name}border-r-double-#{$color_name} {
+        border-right: 1px double $border-color;
+      }
+
+      .#{$break-point-name}border-r-none {
+        border-right: none;
+      }
+
+      //== left ==//
+      .#{$break-point-name}border-l-solid-#{$color_name} {
+        border-left: 1px solid $border-color;
+      }
+
+      .#{$break-point-name}border-l-dashed-#{$color_name} {
+        border-left: 1px dashed $border-color;
+      }
+
+      .#{$break-point-name}border-l-dotted-#{$color_name} {
+        border-left: 1px dotted $border-color;
+      }
+
+      .#{$break-point-name}border-l-double-#{$color_name} {
+        border-left: 1px double $border-color;
+      }
+
+      .#{$break-point-name}border-l-none {
+        border-left: none;
+      }
+    }
+  }
+}

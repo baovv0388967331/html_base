@@ -1,0 +1,85 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}text-8 {
+      @include px-to-rem(font-size, 8px);
+      @include px-to-rem(line-height, 12px);
+    }
+
+    .#{$break-point-name}text-10 {
+      @include px-to-rem(font-size, 10px);
+      @include px-to-rem(line-height, 13px);
+    }
+
+    .#{$break-point-name}text-11 {
+      @include px-to-rem(font-size, 11px);
+      @include px-to-rem(line-height, 14px);
+    }
+
+    .#{$break-point-name}text-12 {
+      @include px-to-rem(font-size, 12px);
+      @include px-to-rem(line-height, 16px);
+    }
+
+    .#{$break-point-name}text-14 {
+      @include px-to-rem(font-size, 14px);
+      @include px-to-rem(line-height, 20px);
+    }
+
+    .#{$break-point-name}text-16 {
+      @include px-to-rem(font-size, 16px);
+      @include px-to-rem(line-height, 24px);
+    }
+
+    .#{$break-point-name}text-18 {
+      @include px-to-rem(font-size, 18px);
+      @include px-to-rem(line-height, 28px);
+    }
+
+    .#{$break-point-name}text-20 {
+      @include px-to-rem(font-size, 20px);
+      @include px-to-rem(line-height, 28px);
+    }
+
+    .#{$break-point-name}text-24 {
+      @include px-to-rem(font-size, 24px);
+      @include px-to-rem(line-height, 32px);
+    }
+
+    .#{$break-point-name}text-30 {
+      @include px-to-rem(font-size, 30px);
+      @include px-to-rem(line-height, 36px);
+    }
+
+    .#{$break-point-name}text-36 {
+      @include px-to-rem(font-size, 36px);
+      @include px-to-rem(line-height, 40px);
+    }
+
+    .#{$break-point-name}text-38 {
+      @include px-to-rem(font-size, 38px);
+      @include px-to-rem(line-height, 42px);
+    }
+
+    .#{$break-point-name}text-48 {
+      @include px-to-rem(font-size, 48px);
+      line-height: 1
+    }
+
+    .#{$break-point-name}text-54 {
+      @include px-to-rem(font-size, 54px);
+      line-height: 1
+    }
+
+    .#{$break-point-name}text-60 {
+      @include px-to-rem(font-size, 60px);
+      line-height: 1
+    }
+
+    .#{$break-point-name}text-72 {
+      @include px-to-rem(font-size, 72px);
+      line-height: 1
+    }
+  }
+}

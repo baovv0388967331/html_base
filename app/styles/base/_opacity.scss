@@ -1,0 +1,11 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    @each $opacity in $opacities {
+      .#{$break-point-name}opacity-#{$opacity} {
+        opacity: calc($opacity / 100)
+      }
+    }
+  }
+}

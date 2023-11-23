@@ -1,0 +1,21 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}uppercase {
+      text-transform: uppercase;
+    }
+
+    .#{$break-point-name}lowercase {
+      text-transform: lowercase;
+    }
+
+    .#{$break-point-name}capitalize {
+      text-transform: capitalize;
+    }
+
+    .#{$break-point-name}normal-case {
+      text-transform: none;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}block {
+      display: block;
+    }
+
+    .#{$break-point-name}hidden {
+      display: none;
+    }
+  }
+}

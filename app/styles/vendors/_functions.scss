@@ -1,0 +1,17 @@
+@function get-break-point-name($value) {
+  @if $value == 'auto' {
+    @return '';
+  }
+  @else if $value == 'xl' {
+    @return 'xl_';
+  }
+  @else if $value == 'lg' {
+    @return 'lg_';
+  } 
+  @else if $value == 'md' {
+    @return 'md_';
+  } 
+  @else if $value == 'sm' {
+    @return 'sm_';
+  }
+}

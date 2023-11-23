@@ -1,0 +1,21 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}rotate-0 {
+      transform: rotate(0deg)
+    }
+
+    .#{$break-point-name}rotate-45 {
+      transform: rotate(45deg);
+    }
+
+    .#{$break-point-name}rotate-90 {
+      transform: rotate(90deg);
+    }
+
+    .#{$break-point-name}rotate-180 {
+      transform: rotate(180deg);
+    }
+  }
+}

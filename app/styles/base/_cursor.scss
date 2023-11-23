@@ -1,0 +1,37 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}cursor-auto {
+      cursor: auto;
+    }
+
+    .#{$break-point-name}cursor-default {
+      cursor: default;
+    }
+
+    .#{$break-point-name}cursor-pointer {
+      cursor: pointer;
+    }
+
+    .#{$break-point-name}cursor-wait {
+      cursor: wait;
+    }
+
+    .#{$break-point-name}cursor-text {
+      cursor: text;
+    }
+
+    .#{$break-point-name}cursor-move {
+      cursor: move;
+    }
+
+    .#{$break-point-name}cursor-help {
+      cursor: help;
+    }
+
+    .#{$break-point-name}cursor-not-allowed {
+      cursor: not-allowed;
+    }
+  }
+}

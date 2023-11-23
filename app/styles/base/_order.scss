@@ -1,0 +1,37 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}order-1 {
+      order: 1;
+    }
+
+    .#{$break-point-name}order-2 {
+      order: 2;
+    }
+
+    .#{$break-point-name}order-3 {
+      order: 3;
+    }
+
+    .#{$break-point-name}order-4 {
+      order: 4;
+    }
+
+    .#{$break-point-name}order-5 {
+      order: 5;
+    }
+
+    .#{$break-point-name}order-first {
+      order: -9999;
+    }
+
+    .#{$break-point-name}order-last {
+      order: 9999;
+    }
+
+    .#{$break-point-name}order-none {
+      order: 0;
+    }
+  }
+}

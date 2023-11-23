@@ -12,15 +12,14 @@
 }
 
 @mixin fa-icon-rotate($degrees, $rotation) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})';
   transform: rotate($degrees);
 }
 
 @mixin fa-icon-flip($horiz, $vert, $rotation) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)';
   transform: scale($horiz, $vert);
 }
-
 
 // Only display content to screen readers. A la Bootstrap 4.
 //
@@ -53,4 +52,37 @@
     position: static;
     width: auto;
   }
+}
+
+//== breakpoint ==//
+@mixin breakpoint($point) {
+  @if $point == 'auto' {
+    @content;
+  }
+
+  @else if $point == 'xl' {
+    @media only screen and (min-width: 1026px) and (max-width: 1281px) {
+      @content;
+    }
+  }
+  @else if $point == 'lg' {
+    @media only screen and (max-width: 1025px) {
+      @content;
+    }
+  }
+  @else if $point == 'md' {
+    @media only screen and (max-width: 769px) {
+      @content;
+    }
+  }
+  @else if $point == 'sm' {
+    @media only screen and (max-width: 641px) {
+      @content;
+    }
+  }
+}
+
+//== font-size ==//
+@mixin px-to-rem($property, $value) {
+  #{$property}: calc($value / $root-font-size * 1rem);
 }

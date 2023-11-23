@@ -1,0 +1,33 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}z-0 {
+      z-index: 0;
+    }
+
+    .#{$break-point-name}z-10 {
+      z-index: 10;
+    }
+
+    .#{$break-point-name}z-20 {
+      z-index: 20;
+    }
+
+    .#{$break-point-name}z-30 {
+      z-index: 30;
+    }
+
+    .#{$break-point-name}z-40 {
+      z-index: 40;
+    }
+
+    .#{$break-point-name}z-50 {
+      z-index: 50;
+    }
+
+    .#{$break-point-name}z-auto {
+      z-index: auto;
+    }
+  }
+}

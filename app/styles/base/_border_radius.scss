@@ -1,0 +1,37 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}rounded-none {
+      border-radius: 0px;
+    }
+
+    .#{$break-point-name}rounded-sm {
+      @include px-to-rem(border-radius, 2px);
+    }
+
+    .#{$break-point-name}rounded {
+      @include px-to-rem(border-radius, 4px);
+    }
+
+    .#{$break-point-name}rounded-md {
+      @include px-to-rem(border-radius, 6px);
+    }
+
+    .#{$break-point-name}rounded-lg {
+      @include px-to-rem(border-radius, 8px);
+    }
+
+    .#{$break-point-name}rounded-xl {
+      @include px-to-rem(border-radius, 12px);
+    }
+
+    .#{$break-point-name}rounded-2xl {
+      @include px-to-rem(border-radius, 12px);
+    }
+
+    .#{$break-point-name}rounded-full	 {
+      border-radius: 9999px;
+    }
+  }
+}

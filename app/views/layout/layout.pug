@@ -11,15 +11,16 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title= title
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700")
 		link(rel="stylesheet", href="./styles/reset.css")
 		link(rel="stylesheet", href="./styles/fontawesome.css")
 		link(rel="stylesheet", href="./styles/styles.css")
 	body(class=bodyClass)
-		.wrapper
-			block header
-				include ../blocks/header
-			block container
-			block footer
-				include ../blocks/footer
-			block script
-				include ../blocks/scripts
+		block header
+			include ../blocks/header
+		block banner
+			include ../blocks/banner
+		block content
+			include ../blocks/content
+		block script
+			include ../blocks/scripts

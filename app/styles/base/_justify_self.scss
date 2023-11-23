@@ -1,0 +1,25 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}justify-self-auto {
+      justify-self: auto;
+    }
+
+    .#{$break-point-name}justify-self-start {
+      justify-self: start;
+    }
+
+    .#{$break-point-name}justify-self-end {
+      justify-self: end;
+    }
+
+    .#{$break-point-name}justify-self-center {
+      justify-self: center;
+    }
+
+    .#{$break-point-name}justify-self-stretch {
+      justify-self: stretch;
+    }
+  }
+}

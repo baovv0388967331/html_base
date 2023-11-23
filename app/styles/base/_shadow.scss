@@ -1,0 +1,17 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}shadow {
+      box-shadow: 0.2px 2px 70px 0 rgba(29, 29, 29, 0.1);
+    }
+
+    .#{$break-point-name}shadow-1 {
+      box-shadow: 0.5px 4px 8px 0 rgba(29, 29, 29, 0.14);
+    }
+
+    .#{$break-point-name}shadow-2 {
+      box-shadow: -4px 0px 8px 0 rgba(29, 29, 29, 0.14);
+    }
+  }
+}

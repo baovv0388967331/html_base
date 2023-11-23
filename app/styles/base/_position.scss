@@ -1,0 +1,89 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}static {
+      position: static;
+    }
+
+    .#{$break-point-name}fixed {
+      position: fixed;
+    }
+
+    .#{$break-point-name}absolute {
+      position: absolute;
+    }
+
+    .#{$break-point-name}relative {
+      position: relative;
+    }
+
+    .#{$break-point-name}sticky {
+      position: sticky;
+    }
+
+    @for $size from 0px through $max-position {
+      $size_name: str-slice(#{$size}, 1, -3);
+
+      .#{$break-point-name}-top-#{$size_name} {
+        @include px-to-rem(top, -$size);
+      }
+
+      .#{$break-point-name}-right-#{$size_name} {
+        @include px-to-rem(right, -$size);
+      }
+
+      .#{$break-point-name}-left-#{$size_name} {
+        @include px-to-rem(left, -$size);
+      }
+
+      .#{$break-point-name}-bottom-#{$size_name} {
+        @include px-to-rem(bottom, -$size);
+      }
+
+      .#{$break-point-name}top-#{$size_name} {
+        @include px-to-rem(top, $size);
+      }
+
+      .#{$break-point-name}right-#{$size_name} {
+        @include px-to-rem(right, $size);
+      }
+
+      .#{$break-point-name}left-#{$size_name} {
+        @include px-to-rem(left, $size);
+      }
+
+      .#{$break-point-name}bottom-#{$size_name} {
+        @include px-to-rem(bottom, $size);
+      }
+    }
+
+    .#{$break-point-name}top-0 {
+      top: 0;
+    }
+
+    .#{$break-point-name}left-0 {
+      left: 0;
+    }
+
+    .#{$break-point-name}right-0 {
+      right: 0;
+    }
+
+    .#{$break-point-name}bottom-0 {
+      bottom: 0;
+    }
+
+    .#{$break-point-name}left-0-center {
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .#{$break-point-name}right-0-center {
+      right: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+}

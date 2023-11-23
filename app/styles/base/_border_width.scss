@@ -1,0 +1,21 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}border-0 {
+      border-width: 0px !important;
+    }
+
+    .#{$break-point-name}border-2 {
+      border-width: 2px !important;
+    }
+
+    .#{$break-point-name}border-3 {
+      border-width: 3px !important;
+    }
+
+    .#{$break-point-name}border-4 {
+      border-width: 4px !important;
+    }
+  }
+}

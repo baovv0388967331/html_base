@@ -1,0 +1,37 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}text-left {
+      text-align: left;
+    }
+
+    .#{$break-point-name}text-center {
+      text-align: center;
+    }
+
+    .#{$break-point-name}text-right {
+      text-align: right;
+    }
+
+    .#{$break-point-name}text-justify {
+      text-align: justify;
+    }
+
+    .#{$break-point-name}text-start {
+      text-align: start;
+    }
+
+    .#{$break-point-name}text-end {
+      text-align: end;
+    }
+
+    .#{$break-point-name}order-last {
+      order: 9999;
+    }
+
+    .#{$break-point-name}order-none {
+      order: 0;
+    }
+  }
+}

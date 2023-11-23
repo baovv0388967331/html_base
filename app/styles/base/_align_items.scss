@@ -1,0 +1,25 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}items-start {
+      align-items: flex-start;
+    }
+
+    .#{$break-point-name}items-end {
+      align-items: flex-end;
+    }
+
+    .#{$break-point-name}items-center {
+      align-items: center;
+    }
+
+    .#{$break-point-name}items-baseline {
+      align-items: baseline;
+    }
+
+    .#{$break-point-name}items-stretch {
+      align-items: stretch;
+    }
+  }
+}

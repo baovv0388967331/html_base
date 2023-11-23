@@ -1,0 +1,77 @@
+@use 'sass:string';
+
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    @for $size from 0px through $max_spacing {
+      $size_name: str-slice(#{$size}, 1, -3);
+
+      //== padding ==//
+      .#{$break-point-name}p-#{$size_name} {
+        @include px-to-rem(padding, $size);
+      }
+
+      .#{$break-point-name}px-#{$size_name} {
+        @include px-to-rem(padding-left, $size);
+        @include px-to-rem(padding-right, $size);
+      }
+
+      .#{$break-point-name}py-#{$size_name} {
+        @include px-to-rem(padding-top, $size);
+        @include px-to-rem(padding-bottom, $size);
+      }
+
+      .#{$break-point-name}pt-#{$size_name} {
+        @include px-to-rem(padding-top, $size);
+      }
+
+      .#{$break-point-name}pr-#{$size_name} {
+        @include px-to-rem(padding-right, $size);
+      }
+
+      .#{$break-point-name}pb-#{$size_name} {
+        @include px-to-rem(padding-bottom, $size);
+      }
+
+      .#{$break-point-name}pl-#{$size_name} {
+        @include px-to-rem(padding-left, $size);
+      }
+
+      //== margin ==//
+      .#{$break-point-name}m-auto {
+        margin: 0 auto;
+      }
+
+      .#{$break-point-name}m-#{$size_name} {
+        @include px-to-rem(margin, $size);
+      }
+    
+      .#{$break-point-name}mx-#{$size_name} {
+        @include px-to-rem(margin-left, $size);
+        @include px-to-rem(margin-right, $size);
+      }
+    
+      .#{$break-point-name}my-#{$size_name} {
+        @include px-to-rem(margin-top, $size);
+        @include px-to-rem(margin-bottom, $size);
+      }
+    
+      .#{$break-point-name}mt-#{$size_name} {
+        @include px-to-rem(margin-top, $size);
+      }
+    
+      .#{$break-point-name}mr-#{$size_name} {
+        @include px-to-rem(margin-right, $size);
+      }
+    
+      .#{$break-point-name}mb-#{$size_name} {
+        @include px-to-rem(margin-bottom, $size);
+      }
+    
+      .#{$break-point-name}ml-#{$size_name} {
+        @include px-to-rem(margin-left, $size);
+      }
+    }
+  }
+}

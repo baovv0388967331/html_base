@@ -1,0 +1,11 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    @each $font-weight in $font-weights {
+      .#{$break-point-name}font-#{$font-weight} {
+        font-weight: $font-weight;
+      }
+    }
+  }
+}

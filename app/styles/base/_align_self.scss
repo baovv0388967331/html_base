@@ -1,0 +1,29 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}self-auto {
+      align-self: auto;
+    }
+
+    .#{$break-point-name}self-start {
+      align-self: flex-start;
+    }
+
+    .#{$break-point-name}self-end {
+      align-self: flex-end;
+    }
+
+    .#{$break-point-name}self-center {
+      align-self: center;
+    }
+
+    .#{$break-point-name}self-stretch {
+      align-self: stretch;
+    }
+
+    .#{$break-point-name}self-baseline {
+      align-self: baseline;
+    }
+  }
+}

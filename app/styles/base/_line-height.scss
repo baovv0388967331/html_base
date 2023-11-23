@@ -1,0 +1,13 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+    
+    .#{$break-point-name}leading-inherit {
+      line-height: inherit;
+    }
+
+    .#{$break-point-name}leading-none {
+      line-height: 1;
+    }
+  }
+}

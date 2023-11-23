@@ -1,0 +1,41 @@
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .#{$break-point-name}content-normal {
+      align-content: normal;
+    }
+
+    .#{$break-point-name}content-center {
+      align-content: center;
+    }
+
+    .#{$break-point-name}content-start {
+      align-content: flex-start;
+    }
+
+    .#{$break-point-name}content-end {
+      align-content: flex-end;
+    }
+
+    .#{$break-point-name}content-between {
+      align-content: space-between;
+    }
+
+    .#{$break-point-name}content-around {
+      align-content: space-around;
+    }
+
+    .#{$break-point-name}content-evenly {
+      align-content: space-evenly;
+    }
+
+    .#{$break-point-name}content-baseline {
+      align-content: baseline;
+    }
+
+    .#{$break-point-name}content-stretch {
+      align-content: stretch;
+    }
+  }
+}

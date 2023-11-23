@@ -1,0 +1,29 @@
+@function get-container-width($value) {
+  @if $value == 'auto' {
+    @return 1170px;
+  }
+  @else if $value == 'xl' {
+    @return 1080px;
+  }
+  @else if $value == 'lg' {
+    @return 914px;
+  } 
+  @else if $value == 'md'{
+    @return 658px;
+  }
+  @else if $value == 'sm'{
+    @return 345px;
+  }
+}
+
+@each $break-point in $break-points {
+  @include breakpoint($break-point) {
+    $break-point-name: get-break-point-name($break-point);
+
+    .container {
+      width: 100%;
+      @include px-to-rem(max-width, get-container-width($break-point));
+      margin: 0 auto;
+    }
+  }
+}
